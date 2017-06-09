@@ -1,7 +1,7 @@
-include "token.h";
+#include "token.h"
 
 static int getToken(){
-	static int last_char = '';
+	static int last_char = '\0';
 
 	//skip the white spaces
 	while(isspace(last_char))
@@ -9,16 +9,17 @@ static int getToken(){
 
 	//verify if the current character is one string [a-zA-Z][a-zA-Z0-9]*
 	if(isalpha(last_char)){
+		identifier_str = last_char;
+
 		//while the next char is one alphanumeric then 
-		while(isalnum(last_char = getchar())){
+		while(isalnum(last_char = getchar()))
 			identifier_str += last_char;
 
-			//verify the strings if the current token is a def instruction of extern
-			if(identifier_str == "def") return tok_def;
-			else if(identifier_str == "extern") return tok_extern;
+		//verify the strings if the current token is a def instruction of extern
+		if(identifier_str == "def") return tok_def;
+		else if(identifier_str == "extern") return tok_extern;
 
-			return tok_identifier; 
-		}
+		return tok_identifier;
 	}
 
 	//verify if is one number or one point [0-9\.]+
@@ -42,7 +43,7 @@ static int getToken(){
 	}
 
 	//verify one comment token
-	if(last_char == "#"){
+	if(last_char == '#'){
 		//get the next char
 		do last_char = getchar();
 		while(last_char != EOF 

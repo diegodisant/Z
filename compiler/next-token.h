@@ -1,3 +1,5 @@
+#include "get-token.h"
+
 /**
  * [current_token the current token beign procesed]
  * @type int

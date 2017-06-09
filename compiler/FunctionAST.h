@@ -1,5 +1,5 @@
-include "PrototypeAST.h";
-include "ExpressionAST.h";
+#include "PrototypeAST.h"
+#include "ExpressionAST.h"
 
 class FunctionAST{
 	/**
