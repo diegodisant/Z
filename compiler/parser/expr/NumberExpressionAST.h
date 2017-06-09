@@ -1,5 +1,3 @@
-#include "ExpressionAST.h"
-
 /**
  * @class NumberExpressionAST
  * @classdesc Expression class for one number
@@ -13,4 +11,4 @@ class NumberExpressionAST : public ExpressionAST{
 
 	public:
 		NumberExpressionAST(double value):Value(value){}
-}
+};

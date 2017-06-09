@@ -1,5 +1,11 @@
 #include "token.h"
 
+static int readed_line = 0;
+
+/**
+ * [getToken get the next token code defined in token.h]
+ * @return char [one character in ascii or one token code]
+ */
 static int getToken(){
 	static int last_char = '\0';
 
@@ -50,10 +56,14 @@ static int getToken(){
 			&& last_char != '\n' 
 			&& last_char != '\r');
 
-
 		if(last_char != EOF)
 			return getToken();
 	}
+
+	//increase the line counter
+	if(last_char == '\n'
+		|| last_char == '\r')
+		++readed_line;
 
 	//verify the end of the file and return the token
 	if(last_char == EOF)

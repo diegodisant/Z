@@ -6,4 +6,4 @@
 class ExpressionAST{
 	public:
 		virtual ~ExpressionAST(){} //one virtual destructor to be implemented as interface definition
-}
+};
