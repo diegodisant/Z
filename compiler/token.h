@@ -1,3 +1,7 @@
+/**
+ * @enum Token
+ * @desc This class defines one token denition code, using negative to avoid ascii character override
+ */
 enum Token {
 	tok_eof = -1,
 	tok_def = -2,

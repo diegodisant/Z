@@ -1,6 +1,6 @@
 include "token.h";
 
-static int get_token(){
+static int getToken(){
 	static int last_char = '';
 
 	//skip the white spaces
@@ -13,7 +13,7 @@ static int get_token(){
 		while(isalnum(last_char = getchar())){
 			identifier_str += last_char;
 
-			//verify the strings
+			//verify the strings if the current token is a def instruction of extern
 			if(identifier_str == "def") return tok_def;
 			else if(identifier_str == "extern") return tok_extern;
 
@@ -51,7 +51,7 @@ static int get_token(){
 
 
 		if(last_char != EOF)
-			return get_token();
+			return getToken();
 	}
 
 	//verify the end of the file and return the token
@@ -59,7 +59,9 @@ static int get_token(){
 		return tok_eof;
 
 	//if the character doesn't match in the cases then transform it into ascii
+	//just when is a symbol like (+,-,*,/)
 	int tmp_char = last_char;
+	//continue reading new characters
 	last_char = getchar();
 	return tmp_char;
 }
