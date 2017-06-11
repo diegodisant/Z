@@ -2,7 +2,7 @@
 #define PARSE_ID_EXPR_H
 
 #include "utils/log.h"
-#include "expr/VariableExpressionAST"
+#include "expr/VariableExpressionAST.h"
 #include "expr/CallExpressionAST.h"
 #include "ParseExpression.h"
 
@@ -25,7 +25,8 @@ static ExpressionAST ParseIdentifierExpression(){
 
 	//define the list of arguments
 	std::vector<ExpressionAST*> arguments;
-	if(current_token != ')')
+
+	if(current_token != ')'){
 		while(true){
 			//parse the argument expression
 			ExpressionAST *argument = ParseExpression();
@@ -43,6 +44,7 @@ static ExpressionAST ParseIdentifierExpression(){
 			if(current_token != ',')
 				return Error("Expected ')' or ',' to close the call to function");
 		} 
+	}
 
 	//get the final token to iterate the last char )
 	getNextToken();

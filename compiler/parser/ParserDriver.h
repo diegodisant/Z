@@ -1,6 +1,10 @@
 #ifndef PARSER_DRIVER_H
 #define PARSER_DRIVER_H
 
+#include "handlers/HandleDefinition.h"
+#include "handlers/HandleExtern.h"
+#include "handlers/HandleTopLevelExpression.h"
+
 /**
  * [ParserDriver iterates the tokens and handle the operation for each]
  */
@@ -21,6 +25,9 @@ static void ParserDriver(){
 				HandleExtern();
 				break;
 			//if the current token is not identified then is a top level expression
+			//def name(param1, param2)
+			//	param1 = param1+param2
+			//	param1 //return the param1
 			default:
 				HandleTopLevelExpression();
 				break;

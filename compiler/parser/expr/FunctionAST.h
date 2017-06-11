@@ -1,8 +1,8 @@
 #ifndef FUNCTION_AST_H
 #define FUNCTION_AST_H
 
-#include "PrototypeAST.h";
-#include "ExpressionAST.h";
+#include "PrototypeAST.h"
+#include "ExpressionAST.h"
 
 class FunctionAST{
 	/**

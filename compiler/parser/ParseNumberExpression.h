@@ -1,7 +1,7 @@
 #ifndef PARSE_NUM_EXPR_H
 #define PARSE_NUM_EXPR_H
 
-#include "expr/NumberExpression.h"
+#include "expr/NumberExpressionAST.h"
 
 /**
  * [ParseNumberExpression parse one numberic expression]
@@ -11,7 +11,7 @@
  */
 static ExpressionAST *ParseNumberExpression(){
 	//creates one ast node
-	ExpressionAST *result = new NumberExpression(number_value);
+	ExpressionAST *result = new NumberExpressionAST(number_value);
 
 	//get the next token that will be processed
 	getNextToken();
