@@ -1,3 +1,8 @@
+#ifndef PARSE_NUM_EXPR_H
+#define PARSE_NUM_EXPR_H
+
+#include "expr/NumberExpression.h"
+
 /**
  * [ParseNumberExpression parse one numberic expression]
  * @return [the expression in one ast node]
@@ -14,3 +19,4 @@ static ExpressionAST *ParseNumberExpression(){
 	//make one new node for the AST
 	return result;
 } 
+#endif

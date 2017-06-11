@@ -1,3 +1,8 @@
+#ifndef BINARY_EXPR_AST_H
+#define BINARY_EXPR_AST_H
+
+#include "ExpressionAST.h"
+
 /**
  * @class BinaryExpressionAST
  * @classdesc Process one operator to with to operands
@@ -23,3 +28,5 @@ class BinaryExpressionAST : public ExpressionAST{
 	public:
 		BinaryExpressionAST(char op, ExpressionAST *lo, ExpressionAST *ro):Operation(op), Left_offset(lo), Right_offset(ro){}
 };
+
+#endif

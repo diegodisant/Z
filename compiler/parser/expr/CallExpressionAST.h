@@ -1,3 +1,8 @@
+#ifndef CALL_EXPR_AST_H
+#define CALL_EXPR_AST_H
+
+#include "ExpressionAST.h"
+
 /**
  * @class CallExpressionAST
  * @classdesc Tree used to check if one function is beign called
@@ -18,3 +23,5 @@ class CallExpressionAST : public ExpressionAST{
 	public:
 		CallExpressionAST(const std::string &caller, std::vector<ExpressionAST*> &args):Caller(caller), Arguments(args){}
 };
+
+#endif

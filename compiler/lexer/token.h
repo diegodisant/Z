@@ -1,3 +1,6 @@
+#ifndef TOKEN_H
+#define TOKEN_H
+
 /**
  * @enum Token
  * @desc This class defines one token denition code, using negative to avoid ascii character override
@@ -12,3 +15,5 @@ enum Token {
 
 static std::string identifier_str; //used to fill with id_type
 static double number_value; //used to fill with one numbers
+
+#endif

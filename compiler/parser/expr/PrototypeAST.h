@@ -1,3 +1,6 @@
+#ifndef PROTOTYPE_AST_H
+#define PROTOTYPE_AST_H
+
 /**
  * @class PrototypeAST
  * @classdesc Is the representation of one prototype for a function, 
@@ -20,3 +23,4 @@ class PrototypeAST{
 	public: 
 		PrototypeAST(const std::string &name, const std::vector<std::string> &args):Name(name), Arguments(args){}
 };
+#endif

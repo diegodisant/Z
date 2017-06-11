@@ -1,3 +1,8 @@
+#ifndef GET_TOKEN_H
+#define GET_TOKEN_H
+
+#include <cstdlib>
+#include <stdio.h>
 #include "token.h"
 
 static int readed_line = 0;
@@ -76,3 +81,5 @@ static int getToken(){
 	last_char = getchar();
 	return tmp_char;
 }
+
+#endif

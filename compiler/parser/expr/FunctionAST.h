@@ -1,3 +1,9 @@
+#ifndef FUNCTION_AST_H
+#define FUNCTION_AST_H
+
+#include "PrototypeAST.h";
+#include "ExpressionAST.h";
+
 class FunctionAST{
 	/**
 	 * [*Proto the current prototype pointer]
@@ -14,3 +20,5 @@ class FunctionAST{
 	public:
 		FunctionAST(PrototypeAST *proto, ExpressionAST *body):Proto(proto), Body(body){}
 };
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef NEXT_TOKEN_H
+#define NEXT_TOKEN_H
+
 #include "get-token.h"
 
 /**
@@ -13,3 +16,4 @@ static int getNextToken(){
 	return current_token = getToken();
 }
 
+#endif
