@@ -2,7 +2,6 @@
 #define GET_TOKEN_H
 
 #include <cstdlib>
-#include <stdio.h>
 #include "token.h"
 
 static int readed_line = 0;
@@ -75,10 +74,12 @@ static int getToken(){
 		return tok_eof;
 
 	//if the character doesn't match in the cases then transform it into ascii
-	//just when is a symbol like (+,-,*,/)
+	//just when is a symbol like (+,-,*,<)
 	int tmp_char = last_char;
+
 	//continue reading new characters
 	last_char = getchar();
+	
 	return tmp_char;
 }
 

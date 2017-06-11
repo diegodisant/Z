@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdio.h>
 #include "../compiler/lexer/next-token.h"
 
 /**

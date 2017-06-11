@@ -1,6 +1,7 @@
 #ifndef PARSE_PARENT_EXPR_H
 #define PARSE_PARENT_EXPR_H
 
+#include "utils/log.h"
 #include "ParseExpression.h"
 
 /**
@@ -13,7 +14,7 @@ static ExpressionAST *ParseParentExpression(){
 	//create one expression ast 
 	ExpressionAST *current_expr = ParseExpression();
 
-	//if the current expression is not one valid token
+	//if the current expression is valid
 	if(!current_expr) return 0;
 
 	//if the current token is not one enclosure then return one error

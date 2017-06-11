@@ -1,8 +1,10 @@
 #ifndef PARSE_ID_EXPR_H
 #define PARSE_ID_EXPR_H
 
+#include "utils/log.h"
 #include "expr/VariableExpressionAST"
 #include "expr/CallExpressionAST.h"
+#include "ParseExpression.h"
 
 /**
  * [ParseIdentifierExpression parse one expression that contains one identifier or variable name]
@@ -25,6 +27,7 @@ static ExpressionAST ParseIdentifierExpression(){
 	std::vector<ExpressionAST*> arguments;
 	if(current_token != ')')
 		while(true){
+			//parse the argument expression
 			ExpressionAST *argument = ParseExpression();
 
 			// check if there is arguments in the function
@@ -44,6 +47,7 @@ static ExpressionAST ParseIdentifierExpression(){
 	//get the final token to iterate the last char )
 	getNextToken();
 
+	//create one new call expression with the arguments
 	return new CallExpressionAST(identifier_name, arguments);
 }
 #endif
