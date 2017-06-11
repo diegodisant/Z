@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "g++ $file -o ../tmp/$file_base_name.o"
+}
