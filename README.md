@@ -1,6 +1,5 @@
-# kaleidoscope-lang-llvm
-A simple language created with LLVM to learn how it works, this language is just experimental to learn how to implement one language using LLVM.
+# LLVM Kaleidoscope
 
-This language was created by following a tutorial [llvm building a language](https://www.gitbook.com/book/landersbenjamin/llvm-implementing-a-language/details), thanks to landersbenjamin.
+Kaleidoscpe is simple Front-End Language created with LLVM to learn how this technology works, its experimental.
 
-License: GPL v3.0
+This language was created by following a tutorial [llvm building a language](https://llvm.org/docs/tutorial/), thanks to landersbenjamin.
