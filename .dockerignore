@@ -1,0 +1,7 @@
+*Dockerfile*
+*.DS_Store*
+docker-compose.*
+README.md
+LICENSE
+.editorconfig
+.gitignore
