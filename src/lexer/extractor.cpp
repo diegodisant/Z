@@ -5,8 +5,11 @@
 
 using namespace std;
 
+extern static std::string stringIdentifier;
+extern static double numbervalue;
+
 static int extractToken() {
-  static int lastCharacter = '';
+  static int lastCharacter = ' ';
 
   for (;isspace(lastCharacter);) {
     lastCharacter = getchar();
