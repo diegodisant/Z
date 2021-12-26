@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include "./token.cpp"
+#include "./Token.cpp"
+#include "./TokenStreamer.cpp"
 
 using namespace std;
 
