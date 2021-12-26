@@ -5,3 +5,4 @@
 *.o*
 *.exe*
 docker-compose.override.yml
+!docker-compose.override.yml.dist
