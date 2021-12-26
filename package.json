@@ -1,0 +1,9 @@
+{
+  "name": "z-lang",
+  "version": "0.0.1",
+  "description": "Z is simple Front-End Language created with LLVM to learn how this technology works, its experimental.",
+  "repository": "git@github.com:diegodisant/llvm-kaleidoscope.git",
+  "author": "diegodisant",
+  "license": "MIT",
+  "private": true
+}
