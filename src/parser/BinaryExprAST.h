@@ -11,7 +11,7 @@ class BinaryExprAST : public ExprAST {
 
   public:
     BinaryExprAST(
-      char operator,
+      char Operator,
       std::unique_ptr<ExprAST> LHS,
       std::unique_ptr<ExprAST> RHS
     ) : Operator(Operator), LHS(std::move(LHS)), RHS(std::move(RHS)) {}

@@ -1,4 +1,4 @@
 class ExprAST {
   public:
-    virtual ~ExpressionAst() {}
+    virtual ~ExprAST() {};
 }

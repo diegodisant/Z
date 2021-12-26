@@ -8,7 +8,7 @@ class PrototypeAST {
 
   public:
     PrototypeAST(
-      const std::string &name,
+      const std::string &Name,
       std::vector<std::string> Args
     ): Name(Name), Args(std::move(Args)) {}
 }
