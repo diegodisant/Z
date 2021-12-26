@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  z:
+    image: diegodisant/z-lang:${Z_IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./docker/z/Dockerfile
+    entrypoint: gcc
+    network_mode: host
+    container_name: z-lang-cli
+    volumes:
+      - .:/z
+
+  test_unit:
+    image: diegodisant/z-lang:${Z_IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./docker/z/Dockerfile
+    entrypoint: gcc
+    network_mode: host
+    container_name: z-lang-test-unit-cli
+    volumes:
+      - .:/z
+
+  yarn:
+    image: whatwedo/yarn:v2.2
+    init: true
+    working_dir: /z
+    entrypoint: yarn
+    network_mode: host
+    container_name: z-yarn-cli
+    volumes:
+      - .:/z
+      - yarn-cache:/root/.cache/yarn/v1
+
+  lint-check:
+    image: whatwedo/yarn:v2.2
+    init: true
+    working_dir: /z
+    entrypoint: 'yarn lint:check'
+    network_mode: host
+    container_name: z-yarn-lint-checker-cli
+    volumes:
+      - .:/z
+      - yarn-cache:/root/.cache/yarn/v1
+
+volumes:
+  yarn-cache:
+    name: 'yarn-cache'
