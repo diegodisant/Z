@@ -1,3 +1,4 @@
 *.DS_Store*
 *.o*
 *.exe*
+docker-compose.override.yml
