@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  z:
+    image: diegodisant/z-lang:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: ./docker/z/Dockefile
+    network_mode: host
+    volumes:
+      - .:/kaleidoscope
