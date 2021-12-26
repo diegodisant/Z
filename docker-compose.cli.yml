@@ -24,7 +24,7 @@ services:
       - .:/z
 
   yarn:
-    image: whatwedo/yarn:v2.2
+    image: whatwedo/yarn:${YARN_IMAGE_TAG:-v2.2}
     init: true
     working_dir: /z
     entrypoint: yarn
@@ -35,7 +35,7 @@ services:
       - yarn-cache:/root/.cache/yarn/v1
 
   lint-check:
-    image: whatwedo/yarn:v2.2
+    image: whatwedo/yarn:${YARN_IMAGE_TAG:-v2.2}
     init: true
     working_dir: /z
     entrypoint: 'yarn lint:check'
